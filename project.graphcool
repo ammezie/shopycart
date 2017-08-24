@@ -1,0 +1,30 @@
+# project: cj6qmbro00vfe0152ree18wed
+# version: 2
+
+type User implements Node {
+  id: ID! @isUnique
+  name: String!
+  email: String! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type File implements Node {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  contentType: String!
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  url: String! @isUnique
+}
+
+type Product implements Node {
+  id: ID! @isUnique
+  name: String!
+  description: String!
+  price: Int!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
